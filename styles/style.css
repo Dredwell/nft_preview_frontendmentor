@@ -55,7 +55,7 @@ body {
     top: 0;
     z-index: 50;
     opacity: 0;
-    
+    transition: opacity 0.2s;
 }
 
 .image-container svg{
@@ -83,6 +83,15 @@ body {
     font-weight: 600;
     font-size: 22px;
     margin-bottom: 10px;
+    transition: color 0.2s;
+}
+
+.title:hover{
+    color: var(--cyan);
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
 }
 
 .description {
@@ -96,14 +105,14 @@ body {
     justify-content: space-between;
 }
 
-.cost {
+.price {
     color: var(--cyan);
     font-weight: 400;
     display: flex;
     align-items: center;
 }
 
-.cost p{
+.price p{
     margin-left: 5px;
     font-weight: 600;
 }
@@ -139,5 +148,9 @@ body {
 
 .author p span{
     color: var(--White);
-    
+    transition: color 0.2s;
+}
+
+.author p span:hover {
+    color:var(--cyan);
 }
