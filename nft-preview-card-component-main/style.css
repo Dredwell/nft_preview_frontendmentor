@@ -1,10 +1,17 @@
 :root {
     --soft-blue: hsl(215, 51%, 70%);
     --cyan: hsl(178, 100%, 50%);
+    --cyan-background: hsla(178, 100%, 50%, 0.5);
     --Very-dark-blue-mainBG: hsl(217, 54%, 11%);
     --Very-dark-blue-cardBG: hsl(216, 50%, 16%);
     --Very-dark-blue-line: hsl(215, 32%, 27%);
-    --White: hsl(0, 0%, 100%);
+    --White: rgb(255, 255, 255);
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
 }
 
 body {
@@ -13,16 +20,124 @@ body {
     align-items: center;
     justify-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 97vh;
 }
 
 .container {
+    width: 90%;
     max-width: 350px;
+    max-height: 700px;
     margin: auto;
     background-color: var(--Very-dark-blue-cardBG);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
 }
 
-img {
-    width: 300px;
+.image-container {
+    width: 85%;
+    margin-top: 25px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.image-container .icon-view-container{
+    background-color: var(--cyan-background);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 50;
+    opacity: 0;
+    
+}
+
+.image-container svg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 100;
+}
+
+.icon-view-container:hover{
+    opacity: 1;
+}
+
+.container-text {
+    width: 85%;
+    font-family: 'Outfit', sans-serif;
+    
+}
+
+.title {
+    color: var(--White);
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: var(--soft-blue);
+    line-height: 25px;
+    margin: 0;
+}
+
+.release-information {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cost {
+    color: var(--cyan);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.cost p{
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+.release {
+    display: flex;;
+    align-items: center;
+    color: var(--soft-blue);
+}
+
+.release p{
+    margin-left: 5px;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    color: var(--soft-blue);
+    border-top: solid 1px var(--Very-dark-blue-line);
+    padding: 8px;
+    font-size: 15px;
+}
+
+.author img{
+    max-width: 30px;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: white;
+    border-width: 2px;
+    margin: 0;
+    margin-right: 15px;
+}
+
+.author p span{
+    color: var(--White);
     
 }
